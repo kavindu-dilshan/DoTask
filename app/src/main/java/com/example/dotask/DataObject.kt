@@ -19,8 +19,9 @@ object DataObject {
         listdata.removeAt(pos)
     }
 
-    fun updateData(pos:Int,title:String,priority: String){
+    fun updateData(pos:Int,title:String,priority:String,description:String){
         listdata[pos].title=title
         listdata[pos].priority=priority
+        listdata[pos].description=description
     }
 }

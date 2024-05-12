@@ -3,12 +3,13 @@ package com.example.dotask
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 
 @Dao
 interface DAO {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(entity: Entity)
 
     @Update
@@ -17,6 +18,6 @@ interface DAO {
     @Delete
     suspend fun deleteTask(entity: Entity)
 
-    @Query("Select * from `DoTask`")
+    @Query("SELECT * FROM DoTask ORDER BY id DESC")
     suspend fun getTasks():List<TaskInfo>
 }
