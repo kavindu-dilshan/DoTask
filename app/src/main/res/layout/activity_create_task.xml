@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".CreateTask">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Task"
+        android:textColor="@color/purple_400"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="sans-serif"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="383dp"
+        android:layout_height="271dp"
+        app:srcCompat="@drawable/create"/>
+
+    <EditText
+        android:id="@+id/create_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Task Title"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:background="@drawable/custom_edit_text"
+        android:textColorHint="#BFBBBB"
+        android:textColor="@color/white"/>
+
+    <RadioGroup
+        android:id="@+id/create_priority_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_400"/>
+
+        <RadioButton
+            android:id="@+id/priority_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:textSize="16sp"
+            android:textColor="@color/purple_400"/>
+
+        <RadioButton
+            android:id="@+id/priority_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Medium"
+            android:textSize="16sp"
+            android:textColor="@color/purple_400"/>
+
+        <RadioButton
+            android:id="@+id/priority_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Low"
+            android:textSize="16sp"
+            android:textColor="@color/purple_400"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/create_description"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="Enter Desciption"
+        android:padding="15dp"
+        android:background="@drawable/custom_edit_text"
+        android:textColorHint="#BFBBBB"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/purple_400"
+        android:textColor="@color/white"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="16sp"/>
+
+</LinearLayout>
